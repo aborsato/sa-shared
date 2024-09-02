@@ -1,0 +1,89 @@
+{
+  "fields": [
+    {
+      "metadata": {
+        "comment": "Unique identifier for each customer."
+      },
+      "name": "c_custkey",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "comment": "Name of the customer, providing a human-readable label for identification."
+      },
+      "name": "c_name",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "comment": "Address of the customer, providing a location for contact and delivery."
+      },
+      "name": "c_address",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "comment": "Identifier for the customer's country, allowing categorization and analysis by geographical region."
+      },
+      "name": "c_nationkey",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "comment": "Phone number of the customer, allowing direct contact and communication."
+      },
+      "name": "c_phone",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "comment": "Account balance of the customer, providing information on their financial standing."
+      },
+      "name": "c_acctbal",
+      "nullable": true,
+      "type": "decimal(15,2)"
+    },
+    {
+      "metadata": {
+        "comment": "Market segment the customer belongs to, allowing targeted marketing and customer segmentation."
+      },
+      "name": "c_mktsegment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "comment": "Additional comments or notes about the customer, providing context and further information."
+      },
+      "name": "c_comment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "comment": "A placeholder or dummy column, potentially used for future expansion or testing purposes."
+      },
+      "name": "c_dummy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "age",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "_rescued_data",
+      "nullable": true,
+      "type": "string"
+    }
+  ],
+  "type": "struct"
+}

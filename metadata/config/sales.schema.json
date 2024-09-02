@@ -1,0 +1,367 @@
+{
+  "fields": [
+    {
+      "metadata": {
+        "comment": ""
+      },
+      "name": "cs_sold_date_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_sold_time_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_date_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_bill_customer_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_bill_cdemo_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_bill_hdemo_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_bill_addr_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_customer_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_cdemo_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_hdemo_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_addr_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_call_center_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_catalog_page_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ship_mode_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_warehouse_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_item_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_promo_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_order_number",
+      "nullable": true,
+      "type": "long"
+    },
+    {
+      "metadata": {},
+      "name": "cs_quantity",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "cs_wholesale_cost",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_list_price",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_sales_price",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_discount_amt",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_sales_price",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_wholesale_cost",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_list_price",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_tax",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_coupon_amt",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_ext_ship_cost",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_net_paid",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_net_paid_inc_tax",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_net_paid_inc_ship",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_net_paid_inc_ship_tax",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "cs_net_profit",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "i_item_sk",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(16)"
+      },
+      "name": "i_item_id",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_rec_start_date",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "metadata": {},
+      "name": "i_rec_end_date",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "varchar(200)"
+      },
+      "name": "i_item_desc",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_current_price",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "i_wholesale_cost",
+      "nullable": true,
+      "type": "decimal(7,2)"
+    },
+    {
+      "metadata": {},
+      "name": "i_brand_id",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(50)"
+      },
+      "name": "i_brand",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_class_id",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(50)"
+      },
+      "name": "i_class",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_category_id",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(50)"
+      },
+      "name": "i_category",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_manufact_id",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(50)"
+      },
+      "name": "i_manufact",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(20)"
+      },
+      "name": "i_size",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(20)"
+      },
+      "name": "i_formulation",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(20)"
+      },
+      "name": "i_color",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(10)"
+      },
+      "name": "i_units",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(10)"
+      },
+      "name": "i_container",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "i_manager_id",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {
+        "__CHAR_VARCHAR_TYPE_STRING": "char(50)"
+      },
+      "name": "i_product_name",
+      "nullable": true,
+      "type": "string"
+    }
+  ],
+  "type": "struct"
+}

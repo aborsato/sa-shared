@@ -1,0 +1,25 @@
+spec:
+  name: sales_r
+  source:
+    file:
+      format: parquet
+      path: /Volumes/shared/a9o/raw-files/sales/*
+  transform:
+  - type: dedupe
+    method: rank
+    columns:
+    - i_item_id
+    - cs_sold_date_sk
+    order:
+    - cs_sold_date_sk
+    - cs_sold_time_sk
+  - type: select
+    drop:
+    - cs_item_sk
+    - i_rec_start_date
+    - i_item_desc
+    - i_formulation
+  - type: filter
+    condition: cs_quantity > 50
+  target:
+    mode: overwrite

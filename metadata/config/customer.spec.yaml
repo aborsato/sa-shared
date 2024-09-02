@@ -1,0 +1,12 @@
+name: customer
+source:
+  file:
+    format: parquet
+    path: /Volumes/shared/a9o/raw-files/customer/*
+target:
+  mode: overwrite
+transform:
+- type: dedupe
+  method: dropDuplicates
+  columns:
+  - c_custkey
