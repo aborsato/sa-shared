@@ -1,0 +1,80 @@
+# This is a Databricks asset bundle definition for mlops01.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: mlops01
+  uuid: 2723a10a-80b7-47fe-8ddd-35a0e730163f
+
+# Artifacts are the files that are created by the bundle.
+# They are typically the output of a build process, such as a wheel or a tarball.
+artifacts:
+  default:
+    type: whl
+    build: poetry build
+    path: .
+
+variables:
+  experiment_name:
+    description: Experiment name for the model training.
+    default: /Users/${workspace.current_user.userName}/${bundle.target}-mlops01-experiment
+  catalog_name:
+    # The variable value is defined in the target section for each target
+    description: The catalog name to save the trained model
+  schema_name:
+    description: Model name for the model training.
+    default: a9o
+  model_name:
+    description: Model name for the model training.
+    default: mlops01-model
+  cluster_config:
+    description: Cluster configuration for the model training.
+    type: complex
+    default: {}
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: production
+    presets:
+      # Disable name prefixing for the dev environment
+      name_prefix: ""
+    variables:
+      catalog_name: shared
+      cluster_config:
+        default:
+          spark_version: 15.4.x-scala2.12
+          policy_id: 00047DB018647A13
+          node_type_id: i3.xlarge
+          data_security_mode: DATA_SECURITY_MODE_DEDICATED
+          runtime_engine: PHOTON
+          kind: CLASSIC_PREVIEW
+          use_ml_runtime: true
+          is_single_node: true
+          spark_conf:
+            "spark.databricks.sql.initial.catalog.namespace": ${var.catalog_name}
+            "cost.attribution.dev": true
+    default: true
+    workspace:
+      host: https://redacted.cloud.databricks.com
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+
+  prod:
+    mode: production
+    variables:
+      catalog_name: shared
+      cluster_config:
+        default:
+          spark_version: 15.4.x-scala2.12
+          node_type_id: i3.xlarge
+          data_security_mode: DATA_SECURITY_MODE_DEDICATED
+          runtime_engine: PHOTON
+          kind: CLASSIC_PREVIEW
+          use_ml_runtime: true
+          is_single_node: true
+          spark_conf:
+            "spark.databricks.sql.initial.catalog.namespace": ${var.catalog_name}
+            "cost.attribution.prod": true
+    workspace:
+      host: https://redacted.cloud.databricks.com
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}

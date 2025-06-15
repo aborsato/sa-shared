@@ -1,0 +1,24 @@
+[project]
+name = "wheel01"
+version = "0.1.0"
+description = "First wheel file"
+authors = [
+    {name = "Alan Borsato",email = "alan.borsato@databricks.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyspark (>=3.5.5,<4.0.0)",
+    "mlflow (>=2.21.3,<3.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+main = "wheel01.main:main"
+train = "wheel01.train:main"
