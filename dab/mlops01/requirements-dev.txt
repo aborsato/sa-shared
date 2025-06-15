@@ -27,3 +27,4 @@ wheel
 ## for this project.
 #
 # databricks-connect>=15.4,<15.5
+poetry==2.1.2
