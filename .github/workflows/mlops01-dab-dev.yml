@@ -1,0 +1,32 @@
+name: Project mlops01
+
+on: workflow_dispatch
+
+env:
+  PROJECT_ROOT: ./dab/mlops01
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12'
+    - name: Install Databricks CLI tool
+      uses: databricks/setup-cli@main
+    - name: Install dependencies
+      run: pip install -r requirements-dev.txt
+      working-directory: ${{ env.PROJECT_ROOT }}
+    - name: Build and Deploy to dev environment
+      run: databricks bundle deploy
+      working-directory: ${{ env.PROJECT_ROOT }}
+      env:
+        DATABRICKS_TOKEN: ${{ secrets.SP_TOKEN }}
+        DATABRICKS_BUNDLE_ENV: dev
+    - run: ls -lR
+      continue-on-error: true
+      working-directory: ${{ env.PROJECT_ROOT }}
+
