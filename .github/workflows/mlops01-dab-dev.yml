@@ -23,10 +23,10 @@ jobs:
     - name: Build and Deploy to dev environment
       run: databricks bundle deploy
       working-directory: ${{ env.PROJECT_ROOT }}
+      continue-on-error: true
       env:
         DATABRICKS_TOKEN: ${{ secrets.SP_TOKEN }}
         DATABRICKS_BUNDLE_ENV: dev
     - run: ls -lR
-      continue-on-error: true
       working-directory: ${{ env.PROJECT_ROOT }}
 
