@@ -44,7 +44,7 @@ targets:
       cluster_config:
         default:
           spark_version: 15.4.x-scala2.12
-          policy_id: 00047DB018647A13
+          # policy_id: 00047DB018647A13
           node_type_id: i3.xlarge
           data_security_mode: DATA_SECURITY_MODE_DEDICATED
           runtime_engine: PHOTON
