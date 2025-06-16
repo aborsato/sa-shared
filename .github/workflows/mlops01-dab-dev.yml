@@ -1,4 +1,4 @@
-name: Python Package using Conda
+name: Project mlops01
 
 on: workflow_dispatch
 
